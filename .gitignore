@@ -17,3 +17,6 @@
 
 #ignore the secret files
 *.secret
+
+#don't check tricks into repo
+.tricks
