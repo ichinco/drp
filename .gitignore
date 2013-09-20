@@ -15,8 +15,17 @@
 /log/*.log
 /tmp
 
+# ignore the vim swap files
+*.sw*
+
 #ignore the secret files
 *.secret
 
 #don't check tricks into repo
 .tricks
+
+# ignoring the generated Gemfile.lock
+Gemfile.lock
+
+# ignoring the [dot]rspec
+.rspec
