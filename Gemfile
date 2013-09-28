@@ -20,6 +20,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 group :test do
+  gem 'factory_girl_rails', '4.2.1'
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'
 end
