@@ -1,0 +1,21 @@
+BASIC DRP SITE
+
+Stage 1
+=======
+
+Features
+- sign up form for mentees
+- sign up forms for mentors
+- admin login to manage sign up forms
+
+Stage II
+========
+- SPA
+- student login and RU authentication
+- project management
+
+Stage III
+=========
+
+- MathJax support
+- anything else that comes up...
