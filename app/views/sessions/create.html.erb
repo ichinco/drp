@@ -1,1 +1,2 @@
-<a href = "#">Sign Out</a>
+<p> Welcome, <%= params[:session][:email] %> </p>
+<%= link_to "Sign Out", controller: "sessions", action: "destroy" %>
