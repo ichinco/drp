@@ -36,3 +36,5 @@ Gemfile.lock
 
 # ignoring the [dot]rspec
 .rspec
+
+*.orig

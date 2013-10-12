@@ -1,5 +1,13 @@
 Drp::Application.routes.draw do
-  get "project/home"
+  get "mentor_profile/create"
+  get "mentor_profile/update"
+  get "mentor_profile/view"
+  get "mentor_profile/delete"
+  resources :sessions, only: [:new, :create, :destroy]
+
+  match '/signin',  to: 'sessions#new',         via: 'get'
+  match '/signout', to: 'sessions#destroy',     via: 'delete'
+  root 'project#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
