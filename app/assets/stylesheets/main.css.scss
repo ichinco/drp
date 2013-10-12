@@ -1,0 +1,31 @@
+body
+{
+  font-family: 'Open sans', sans-serif;
+  font-weight: 300;
+  position: absolute;
+  margin: 0px; 
+  min-height: 100%;
+  background-color: #fefefe;
+  color: #565;
+}
+
+a {
+   color: #a25;
+   text-decoration: none;
+}
+
+footer .container
+{
+  color: #666;
+  position: absolute;
+  bottom: 0px;
+  font-size: 12px;
+  background-color: #efefef;
+  width: 100%;
+  padding: 15px 20px;
+  
+  .contact {
+     font-size: 14px;
+     font-weight: 400;
+  }
+}
