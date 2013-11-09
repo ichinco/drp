@@ -22,7 +22,7 @@ class MentorProfileController < ApplicationController
   end
 
   def create
-    @profile = MentorProfile.new 
+    @profile = current_user.mentor_profile || MentorProfile.new 
     @profile.bio = params[:mentor_profile][:bio]
     @profile.users_id = current_user.id
     if (@profile.save)

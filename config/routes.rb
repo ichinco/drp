@@ -8,6 +8,7 @@ Drp::Application.routes.draw do
   get "mentor_profile/delete"
   
   match '/mentor_profile', to: 'mentor_profile#create', via: 'post'
+  match '/mentor_profile/create', to: 'mentor_profile#create', via: 'patch'
   match '/profile', to: 'mentor_profile#view', via: 'get'
   match '/profile/new', to: 'mentor_profile#new', via: 'get'
   match '/profile/update', to: 'mentor_profile#update', via: 'patch'
