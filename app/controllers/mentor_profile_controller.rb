@@ -2,6 +2,10 @@ class MentorProfileController < ApplicationController
     def my_logger
         @@my_logger ||= Logger.new("/tmp/my.log")
     end
+    
+  def index
+    @users = Users.all
+  end
 
   def new
     unless signed_in?
@@ -18,7 +22,9 @@ class MentorProfileController < ApplicationController
   end
 
   def create
-    @profile = MentorProfile.new profile_params
+    @profile = MentorProfile.new 
+    @profile.bio = params[:mentor_profile][:bio]
+    @profile.users_id = current_user.id
     if (@profile.save)
         
     end
