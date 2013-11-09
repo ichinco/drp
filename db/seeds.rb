@@ -10,5 +10,5 @@
 		 				 password:'123456789012345', 
 			             password_confirmation:'123456789012345', 
 			             first_name: 'Knight',
-			             last_name: 'Fu'
+			             last_name: 'Fu' unless Users.find_by email:'knight.w.fu@gmail.com'
 @knightfu.save			            
