@@ -10,11 +10,22 @@ class MentorProfileController < ApplicationController
       my_logger.info 'line 10'
       my_logger.info self.current_user.email
       @user = self.current_user
-      @profile = MentorProfile.new
+      @profile = @user.mentor_profile
+      unless (@profile)
+        @profile = MentorProfile.new
+      end
     end
   end
 
   def create
+    @profile = MentorProfile.new profile_params
+    if (@profile.save)
+        
+    end
+  end
+
+  def profile_params
+    params.permit('bio')
   end
 
   def update
