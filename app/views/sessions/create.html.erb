@@ -1,3 +1,5 @@
 <p> Welcome, <%= params[:session][:email] %> </p>
 <%= link_to "Create profile", controller: "mentor_profile", action: "new" %>
-<%= link_to "Sign Out", method: :delete, controller: "sessions", action: "destroy" %>
+<%= link_to "Sign Out", signout_path, method: 'delete' %>
+
+<%#= link_to "Sign Out", controller: "sessions", action: "destroy" %>
