@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
         sign_in @user
         flash[:success] = "Flashing some stuff"
     else
+      flash[:error] = "Unable to authenticate"
       render "new"
     end
   end
