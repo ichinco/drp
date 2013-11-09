@@ -1,5 +1,7 @@
 Drp::Application.routes.draw do
-  get "mentor_profile/create"
+
+  get "mentor_profile/new"
+  post "mentor_profile/create"
   get "mentor_profile/update"
   get "mentor_profile/view"
   get "mentor_profile/delete"
