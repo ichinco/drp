@@ -1,7 +1,6 @@
-
 <div class="row">
   <div class="span6 offset3">
-    <%= form_for(@profile) do |f| %>
+    <%= form_for @profile, url: {action: "create"} do |f| %>
 
       <%= f.label :bio %>
       <%= f.text_field :bio %>
@@ -9,4 +8,5 @@
       <%= f.submit "Save", class: "btn btn-large btn-primary" %>
     <% end %>
   </div>
+    
 </div>

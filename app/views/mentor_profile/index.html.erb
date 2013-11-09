@@ -1,0 +1,9 @@
+
+
+<% @users.each do |user| %>
+<p> <%= user.email %> 
+<% profile = MentorProfile.find_by users_id: user.id %>
+<%= profile ? profile.bio : "" %></p>
+<%end%>
+
+
