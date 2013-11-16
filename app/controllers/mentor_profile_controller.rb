@@ -11,10 +11,9 @@ class MentorProfileController < ApplicationController
     unless signed_in?
       redirect_to "/sessions/new"
     else
-      my_logger.info 'line 10'
-      my_logger.info self.current_user.email
       @user = self.current_user
       @profile = @user.mentor_profile
+      @interests = @profile.interests
       unless (@profile)
         @profile = MentorProfile.new
       end
@@ -26,8 +25,9 @@ class MentorProfileController < ApplicationController
     @profile.bio = params[:mentor_profile][:bio]
     @profile.users_id = current_user.id
     if (@profile.save)
-        
+       flash[:success] = "Your profile succesfully saved."
     end
+    render 'new'
   end
 
   def profile_params

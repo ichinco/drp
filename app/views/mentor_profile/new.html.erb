@@ -3,8 +3,10 @@
     <%= form_for @profile, url: {action: "create"} do |f| %>
 
       <%= f.label :bio %>
-      <%= f.text_field :bio %>
-
+      <%= f.text_area :bio %>
+  <br>
+      <%= f.label :interests %>
+      <%= f.text_field :interests %>
       <%= f.submit "Save", class: "btn btn-large btn-primary" %>
     <% end %>
   </div>

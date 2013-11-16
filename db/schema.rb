@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131109211314) do
+ActiveRecord::Schema.define(version: 20131116192114) do
 
   create_table "interests", force: true do |t|
     t.string   "name"
@@ -19,11 +19,9 @@ ActiveRecord::Schema.define(version: 20131109211314) do
     t.datetime "updated_at"
   end
 
-  create_table "mentor_profile_interests_pairings", force: true do |t|
-    t.integer  "mentor_profiles_id"
-    t.integer  "interests_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "interests_mentor_profiles", force: true do |t|
+    t.integer "mentor_profile_id"
+    t.integer "interests_id"
   end
 
   create_table "mentor_profiles", force: true do |t|
