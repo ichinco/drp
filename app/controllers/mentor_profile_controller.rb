@@ -24,10 +24,29 @@ class MentorProfileController < ApplicationController
     @profile = current_user.mentor_profile || MentorProfile.new 
     @profile.bio = params[:mentor_profile][:bio]
     @profile.users_id = current_user.id
-    if (@profile.save)
-       flash[:success] = "Your profile succesfully saved."
+    @interests = @profile.interests
+    kept_interests = params[:interest]
+    @interests.each do |interest|
+        unless kept_interests.include? interest[:name]
+            interest.mentor_profiles.delete(@profile)
+        end
     end
-    render 'new'
+    new_interests_list = params[:interests].downcase
+    new_interests_list.split(',').each do |interest|
+        #clean string first
+        interest = interest.downcase
+        new_interest = Interests.find_by(name: interest) || \
+                       Interests.new(name: interest)
+        if !@profile.interests.include? interest && \
+           new_interest.save
+           @profile.interests << new_interest
+        end
+    end    
+    if (@profile.save)
+       flash[:success] = "Your profile was saved succesfully."
+    end
+    render :new
+    #redirect_to '/mentor_profile/new'
   end
 
   def profile_params

@@ -5,8 +5,21 @@
       <%= f.label :bio %>
       <%= f.text_area :bio %>
   <br>
-      <%= f.label :interests %>
-      <%= f.text_field :interests %>
+      <%= f.label "my interests" %>
+      <% @interests.each do |interest| %>
+      <ul>
+         <li>
+         <%= check_box_tag "interest[]", 
+                           interest[:name], 
+                           checked: true %>
+         <%= label_tag interest[:name] %>
+         </li>
+      </ul>
+      <% end %>
+
+      <%= f.label 'Add new interests' %>
+      <%= text_field_tag :interests %>
+
       <%= f.submit "Save", class: "btn btn-large btn-primary" %>
     <% end %>
   </div>
