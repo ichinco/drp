@@ -11,10 +11,9 @@ class MentorProfileController < ApplicationController
     unless signed_in?
       redirect_to "/sessions/new"
     else
-      my_logger.info 'line 10'
-      my_logger.info self.current_user.email
       @user = self.current_user
       @profile = @user.mentor_profile
+      @interests = @profile.interests
       unless (@profile)
         @profile = MentorProfile.new
       end
@@ -22,12 +21,32 @@ class MentorProfileController < ApplicationController
   end
 
   def create
-    @profile = MentorProfile.new 
+    @profile = current_user.mentor_profile || MentorProfile.new 
     @profile.bio = params[:mentor_profile][:bio]
     @profile.users_id = current_user.id
-    if (@profile.save)
-        
+    @interests = @profile.interests
+    kept_interests = params[:interest]
+    @interests.each do |interest|
+        unless kept_interests.include? interest[:name]
+            interest.mentor_profiles.delete(@profile)
+        end
     end
+    new_interests_list = params[:interests].downcase
+    new_interests_list.split(',').each do |interest|
+        #clean string first
+        interest = interest.downcase.gsub(/\s{2,}/, ' ').strip
+        new_interest = Interests.find_by(name: interest) || \
+                       Interests.new(name: interest)
+        if !@profile.interests.include?(new_interest) && \
+           new_interest.save
+           @profile.interests << new_interest
+        end
+    end    
+    if (@profile.save)
+       flash[:success] = "Your profile was saved succesfully."
+    end
+    #render :new
+    redirect_to '/mentor_profile/new'
   end
 
   def profile_params
