@@ -34,10 +34,10 @@ class MentorProfileController < ApplicationController
     new_interests_list = params[:interests].downcase
     new_interests_list.split(',').each do |interest|
         #clean string first
-        interest = interest.downcase
+        interest = interest.downcase.gsub(/\s{2,}/, ' ').strip
         new_interest = Interests.find_by(name: interest) || \
                        Interests.new(name: interest)
-        if !@profile.interests.include? interest && \
+        if !@profile.interests.include?(new_interest) && \
            new_interest.save
            @profile.interests << new_interest
         end
@@ -45,8 +45,8 @@ class MentorProfileController < ApplicationController
     if (@profile.save)
        flash[:success] = "Your profile was saved succesfully."
     end
-    render :new
-    #redirect_to '/mentor_profile/new'
+    #render :new
+    redirect_to '/mentor_profile/new'
   end
 
   def profile_params
