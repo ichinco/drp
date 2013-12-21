@@ -10,6 +10,19 @@ body
   width: 100%;
 }
 
+a {
+   color: #591;
+   text-decoration: none;
+}
+
+h2 {
+    font-size: 40px;    
+}
+
+.green{
+  color: #8dc63f; 
+}
+
 .logo-container {
   text-align: center;    
 
@@ -24,14 +37,6 @@ body
     .logo-text {
       font-size: 25px;
     }
-}
-
-.green{
-  color: #8dc63f; 
-}
-
-h2 {
-    font-size: 40px;    
 }
 
 .middle-section{
@@ -82,14 +87,66 @@ h2 {
     }
 }
 
+.nav-container {
+    width: 60%;
+    min-width: 650px;
+    margin: 20px auto 100px;
 
-a {
-   color: #591;
-   text-decoration: none;
+    .nav-item {
+        float: left;
+        width: 25%;
+        text-align: center;
+
+        .label {
+            color: #333;
+            font-size: 20px;
+        }
+
+        .button {
+            margin: 3px auto 10px;
+            background-image: url(/assets/icons.png);
+            background-repeat: no-repeat;
+            width: 80px;
+            height: 80px;
+            border: solid 8px #9c2;
+            border-radius: 50%;
+            background-position: -8px;
+
+        }
+
+        .past {
+            background-position-x: -111px;
+            background-position-y: -14px;
+        }
+
+        .participants {
+            background-position-x: -311px;
+            background-position-y: -12px;
+        }
+
+        .mentor {
+            background-position-x: -209px;
+            background-position-y: -13px;
+        }
+
+        .info {
+            background-position-x: -408px;
+            background-position-y: -11px;
+        }
+
+    }
 }
+
+.nav-container:after{
+    display: block;
+    clear: both;
+    content: "";
+}
+
 
 footer .container
 {
+  clear: both;
   color: #666;
   position: absolute;
   bottom: 0px;
