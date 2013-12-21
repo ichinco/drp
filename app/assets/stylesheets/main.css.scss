@@ -5,13 +5,86 @@ body
   position: absolute;
   margin: 0px; 
   min-height: 100%;
-  background-color: #fefefe;
-  color: #565;
+  background-color: #efefeb;
+  color: #343;
   width: 100%;
 }
 
+.logo-container {
+  text-align: center;    
+
+    .logo-image {
+      background-image: image-url('logo.png');
+      width: 203px;
+      height: 185px;
+      background-repeat: no-repeat; 
+      margin: auto;
+    }
+
+    .logo-text {
+      font-size: 25px;
+    }
+}
+
+.green{
+  color: #8dc63f; 
+}
+
+h2 {
+    font-size: 40px;    
+}
+
+.middle-section{
+    margin:auto;
+    width: 60%;
+    min-width: 650px;
+    .row{
+        display: table-row;    
+    }
+    .middle-text{
+        display: table-cell;
+        width: 70%;
+        vertical-align: middle;   
+        p{
+            text-align: justify;
+        }
+    }
+}
+
+.sign-up{
+    display: table-cell;
+    width: 30%;
+    padding-left: 50px;
+    vertical-align: middle;
+    text-align: center;
+    .sign-up-button{
+        margin: auto;
+        background-image: image-url('icons.png');
+        width: 80px;
+        height: 80px;
+        border: solid 10px #9c3;
+        background-position: -8px;
+        border-radius: 100px;
+    }
+    .sign-up-label{
+        font-size: 24px;
+        font-weight: 400;
+    }
+    
+    *{
+        display: block;
+        color: #333;
+    }
+
+    .green{
+        font-size: 14px;
+        color: #591;
+    }
+}
+
+
 a {
-   color: #a25;
+   color: #591;
    text-decoration: none;
 }
 
