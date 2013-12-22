@@ -1,19 +1,29 @@
 <% provide(:title, "Sign in") %>
-<h1>Sign in</h1>
 <% flash.each do |key, value| %>
    <div class='alert alert-<%= key%>'><%= value %></div>
 <% end %>
-<div class="row">
-  <div class="span6 offset3">
-    <%= form_for(:session, url: sessions_path) do |f| %>
 
-      <%= f.label :email %>
-      <%= f.text_field :email %>
+<section>
+    <div class="logo-container">
+        <div class="logo-image">
+        </div>
+        <span class="logo-text">directed <span class="green">reading</span> program</span>
+    </div>
+</section>
 
-      <%= f.label :password %>
-      <%= f.password_field :password %>
+<div id="container">
+    <div class="login-box">
+      <div class="span6 offset3">
+        <%= form_for(:session, url: sessions_path) do |f| %>
 
-      <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
-    <% end %>
-  </div>
+          <%= f.label :email, "username" %>
+          <%= f.text_field :email %>
+
+          <%= f.label :password, "password" %>
+          <%= f.password_field :password %>
+
+          <%= f.submit "Log in", class: "btn btn-large btn-primary" %>
+        <% end %>
+      </div>
+    </div>
 </div>
