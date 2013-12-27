@@ -20,6 +20,12 @@
         background-color: #bfbfbd;
         border: none;
         height: 44px;
+        text-indent: 10px;
+        border-radius: 5px;
+    }
+    input:focus {
+        outline: none;
+        box-shadow: 0 0 5px #669900;
     }
     .btn {
         height: 37px;        
