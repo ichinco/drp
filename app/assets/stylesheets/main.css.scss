@@ -110,28 +110,23 @@ h2 {
             height: 80px;
             border: solid 8px #9c2;
             border-radius: 50%;
-            background-position: -8px;
 
         }
 
         .past {
-            background-position-x: -111px;
-            background-position-y: -14px;
+            background-position: -111px -14px;
         }
 
         .participants {
-            background-position-x: -311px;
-            background-position-y: -12px;
+            background-position: -311px -12px;
         }
 
         .mentor {
-            background-position-x: -209px;
-            background-position-y: -13px;
+            background-position: -209px -13px;
         }
 
         .info {
-            background-position-x: -408px;
-            background-position-y: -11px;
+            background-position: -408px -11px;
         }
 
     }
