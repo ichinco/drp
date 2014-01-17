@@ -1,9 +1,9 @@
-Hello World.
-
-<% if signed_in? %>
-Welcome, <%= current_user.email %>.
-<%= link_to "Sign Out", signout_path, method: :delete %>
-<%= link_to "Create profile", controller: "mentor_profile", action: "new" %>
-<% else  %>
-<%= link_to "Login", controller: "sessions", action: "new" %>
-<% end %>
+<div class='login-bar'>
+  <% if signed_in? %>
+    Welcome, <%= current_user.email %>.
+    <%= link_to "Sign Out", signout_path, method: :delete %>
+    <%= link_to "Create profile", controller: "mentor_profile", action: "new" %>
+  <% else  %>
+    <%= link_to "Login", controller: "sessions", action: "new" %>
+  <% end %>
+</div>
