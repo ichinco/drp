@@ -21,6 +21,13 @@
 #ignore the secret files
 *.secret
 
+#intellij specific files
+.generators
+.rakeTasks
+*.iml
+*.ipr
+*.iws
+
 #don't check tricks into repo
 .tricks
 
