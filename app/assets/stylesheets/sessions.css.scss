@@ -1,3 +1,57 @@
 // Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// You can use Sass (SCSS) here: http://sass-lang.cologin-box
+
+.login-box{
+    margin: auto;
+    margin-top: 43px;
+    width: 400px;
+    overflow: auto;
+    * {
+        display: block;    
+        font-size: 20px;
+    }
+    label{
+        margin-top: 27px;
+        color:  #669900;
+    }
+    label, button{
+        font-weight: 600;
+    }
+    input {
+        width: 100%;
+        background-color: #bfbfbd;
+        border: none;
+        height: 44px;
+        text-indent: 10px;
+        border-radius: 5px;
+    }
+    input:focus {
+        outline: none;
+        box-shadow: 0 0 5px #669900;
+    }
+    .btn {
+        height: 37px;        
+        width: 100px;
+        margin-top: 33px;
+        float: right;
+        color: #ffffff;
+        font-weight: 900;
+        background-color: #99cc33;
+        border: none;
+        border-top-left-radius: 12px 30px;
+        border-bottom-left-radius: 12px 30px;
+        border-top-right-radius: 12px 30px;
+        border-bottom-right-radius: 12px 30px;
+        text-indent: 0;
+        }
+     .btn:hover {
+        background-color: #5F8512;
+     }
+}
+
+.login-box:after {
+    content: " ";
+    display: block;
+    clear: both;
+}

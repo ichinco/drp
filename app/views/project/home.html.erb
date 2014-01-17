@@ -1,14 +1,58 @@
 <% provide(:title, 'Home' ) %>
 
+<%=render '/layouts/logo'%>
+
 <section>
-<div>
-<h1>DRP - Mathematics</h1>
-<p>
-The Directed Reading Program (DRP) pairs undergraduate students 
-with graduate student mentors for semester-long independent study 
-projects. It runs each semester and during the summer and is 
-coordinated by math Ph.D. students. Participation is not for 
-credit and does not appear on a student's transcript.
-</p>
+<div class="middle-section">
+    <div class="row">
+        <div class="middle-text">
+            <h2>Pair up. Read. Explore.</h2>
+            <p>
+            The Directed Reading Program (DRP) pairs undergraduate students 
+            with graduate student mentors for semester-long independent study 
+            projects. It runs each semester and during the summer and is 
+            coordinated by math Ph.D. students. Participation is not for 
+            credit and does not appear on a student's transcript.
+            </p>
+        </div>
+        <div class="sign-up">
+            <%=link_to "#" do%>
+            <div class="sign-up-button"></div>
+            <span class="sign-up-label">sign up now!</span>
+            <span class="deadline">deadline: Jan, 31</span>
+            <%end%>
+            <%=link_to "More information", "#", class: "green"%>
+        </div>
+    </div>
 </div>
 </section>
+
+<nav>
+  <div class='nav-container'>
+        <div class='nav-item'>
+            <%=link_to "#" do%>
+                <div class="past button"></div>
+                <span class="past label">past projects</span>
+            <%end%>
+        </div>
+        <div class='nav-item'>
+            <%=link_to "#" do%>
+                <div class="mentor button"></div>
+                <span class="mentor label">mentors</span>
+            <%end%>
+        </div>
+        <div class='nav-item'>
+            <%=link_to "#" do%>
+                <div class="participants button"></div>
+                <span class="participants label">participants</span>
+            <%end%>
+        </div>
+        <div class='nav-item'>
+            <%=link_to "#" do%>
+                <div class="info button"></div>
+                <span class="info label">information</span>
+            <%end%>
+        </div>
+  <div>
+</nav>
+

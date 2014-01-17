@@ -5,18 +5,143 @@ body
   position: absolute;
   margin: 0px; 
   min-height: 100%;
-  background-color: #fefefe;
-  color: #565;
+  background-color: #efefeb;
+  color: #343;
   width: 100%;
 }
 
 a {
-   color: #a25;
+   color: #591;
    text-decoration: none;
 }
 
+h2 {
+    font-size: 40px;    
+}
+
+.green{
+  color: #8dc63f; 
+}
+
+.logo-container {
+  text-align: center;    
+
+    .logo-image {
+      background-image: image-url('logo.png');
+      width: 203px;
+      height: 185px;
+      background-repeat: no-repeat; 
+      margin: auto;
+    }
+
+    .logo-text {
+      font-size: 25px;
+    }
+}
+
+.middle-section{
+    margin:auto;
+    width: 60%;
+    min-width: 650px;
+    .row{
+        display: table-row;    
+    }
+    .middle-text{
+        display: table-cell;
+        width: 70%;
+        vertical-align: middle;   
+        p{
+            text-align: justify;
+        }
+    }
+}
+
+.sign-up{
+    display: table-cell;
+    width: 30%;
+    padding-left: 50px;
+    vertical-align: middle;
+    text-align: center;
+    .sign-up-button{
+        margin: auto;
+        background-image: image-url('icons.png');
+        width: 80px;
+        height: 80px;
+        border: solid 10px #9c3;
+        background-position: -8px;
+        border-radius: 100px;
+    }
+    .sign-up-label{
+        font-size: 24px;
+        font-weight: 400;
+    }
+    
+    *{
+        display: block;
+        color: #333;
+    }
+
+    .green{
+        font-size: 14px;
+        color: #591;
+    }
+}
+
+.nav-container {
+    width: 60%;
+    min-width: 650px;
+    margin: 20px auto 100px;
+
+    .nav-item {
+        float: left;
+        width: 25%;
+        text-align: center;
+
+        .label {
+            color: #333;
+            font-size: 20px;
+        }
+
+        .button {
+            margin: 3px auto 10px;
+            background-image: image-url('icons.png');
+            background-repeat: no-repeat;
+            width: 80px;
+            height: 80px;
+            border: solid 8px #9c2;
+            border-radius: 50%;
+
+        }
+
+        .past {
+            background-position: -111px -14px;
+        }
+
+        .participants {
+            background-position: -311px -12px;
+        }
+
+        .mentor {
+            background-position: -209px -13px;
+        }
+
+        .info {
+            background-position: -408px -11px;
+        }
+
+    }
+}
+
+.nav-container:after{
+    display: block;
+    clear: both;
+    content: "";
+}
+
+
 footer .container
 {
+  clear: both;
   color: #666;
   position: absolute;
   bottom: 0px;
