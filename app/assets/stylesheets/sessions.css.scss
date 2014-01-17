@@ -9,11 +9,14 @@
     * {
         display: block;    
         font-size: 20px;
-        font-weight: 600;
+        //font-weight: 600;
     }
     label{
         margin-top: 27px;
         color:  #669900;
+    }
+    label, button{
+        font-weight: 600;
     }
     input {
         width: 100%;
