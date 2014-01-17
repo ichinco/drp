@@ -1,6 +1,6 @@
 <div class='login-bar'>
   <% if signed_in? %>
-    Welcome, <%= current_user.email %>.
+    Welcome, <%= current_user.first_name %>.
     <%= link_to "Sign Out", signout_path, method: :delete %>
     <%= link_to "Create profile", controller: "mentor_profile", action: "new" %>
   <% else  %>

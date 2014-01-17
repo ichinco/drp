@@ -13,11 +13,15 @@ class MentorProfileController < ApplicationController
     else
       @user = self.current_user
       @profile = @user.mentor_profile
-      @interests = @profile.interests
-      unless (@profile)
+      if ( @profile )
+        @interests = @profile.interests
+      else 
         @profile = MentorProfile.new
+        @interests = []
       end
     end
+
+    params[:interests] = session[:interest]
   end
 
   def create
@@ -25,7 +29,8 @@ class MentorProfileController < ApplicationController
     @profile.bio = params[:mentor_profile][:bio]
     @profile.users_id = current_user.id
     @interests = @profile.interests
-    kept_interests = params[:interest]
+    kept_interests = params[:interest] || []
+
     @interests.each do |interest|
         unless kept_interests.include? interest[:name]
             interest.mentor_profiles.delete(@profile)
@@ -46,6 +51,7 @@ class MentorProfileController < ApplicationController
        flash[:success] = "Your profile was saved succesfully."
     end
     #render :new
+    session[:interest] = kept_interests
     redirect_to '/mentor_profile/new'
   end
 
