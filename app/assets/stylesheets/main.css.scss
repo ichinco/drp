@@ -13,6 +13,12 @@ body
 a {
    color: #591;
    text-decoration: none;
+   display: inline-block;
+
+   .logo-text
+   {
+      color: #343;
+   }
 }
 
 h2 {
@@ -21,6 +27,24 @@ h2 {
 
 .green{
   color: #8dc63f; 
+}
+
+.login-bar
+{
+  text-align: right;
+  padding-right: 30px;
+  padding-top: 10px;
+  font-weight: 400;
+
+  a
+  {
+    color: #aaa;
+  }
+
+  a:hover
+  {
+    color: #591;
+  }
 }
 
 .logo-container {
