@@ -1,7 +1,7 @@
 class MentorProfileController < ApplicationController
-    def my_logger
-        @@my_logger ||= Logger.new("/tmp/my.log")
-    end
+  def my_logger
+      @@my_logger ||= Logger.new("/tmp/my.log")
+  end
     
   def index
     @users = Users.all
