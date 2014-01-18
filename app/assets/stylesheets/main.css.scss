@@ -1,5 +1,6 @@
 body
 {
+  overflow-x: hidden;
   font-family: 'Open sans', sans-serif;
   font-weight: 300;
   position: absolute;
@@ -31,11 +32,52 @@ h2 {
 
 .login-bar
 {
-  text-align: right;
-  padding-right: 30px;
-  padding-top: 10px;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
   font-weight: 400;
 
+  .bar-container{
+    margin: auto;
+    position: relative;
+    .logo-small img{
+      left: 0;
+      vertical-align: middle;
+      margin: -2px 5px;
+    }
+    .logo-text{
+      vertical-align: middle;
+      margin: 0px 2px;   
+    }
+    .user-links{
+      right: 0;
+      text-align: right;
+      margin-right: 10px;
+       
+      img{
+        vertical-align: middle;
+      }
+
+      a{
+        margin-top: 6px;
+        font-size: 14px;
+      }
+
+      .welcome-message{
+        position: absolute;
+        right: 150px;
+        font-size: 14px;
+        font-weight: 300;
+        color: #666;
+        margin-top: 8px;
+      }
+
+    }
+    .logo-small, .user-links{
+      width: 50%;
+      position: absolute;  
+    }
+  }
   a
   {
     color: #aaa;
@@ -45,6 +87,10 @@ h2 {
   {
     color: #591;
   }
+}
+
+.content{
+  margin-top: 35px;  
 }
 
 .logo-container {

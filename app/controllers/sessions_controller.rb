@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     @user = Users.find_by email: email
     if @user && (@user.authenticate params[:session][:password] )
         sign_in @user
-        flash[:success] = "Flashing some stuff"
+        #flash[:success] = "Flashing some stuff"
         redirect_to root_url
     else
       flash[:error] = "Unable to authenticate"
