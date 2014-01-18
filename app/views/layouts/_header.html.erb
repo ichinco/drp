@@ -1,9 +1,17 @@
 <div class='login-bar'>
-  <% if signed_in? %>
-    Welcome, <%= current_user.first_name %>.
-    <%= link_to "Sign Out", signout_path, method: :delete %>
-    <%= link_to "Create profile", controller: "mentor_profile", action: "new" %>
-  <% else  %>
-    <%= link_to "Login", controller: "sessions", action: "new" %>
-  <% end %>
+  <div class='bar-container'>
+    <div class='logo-small'>
+      <%= image_tag "logo.png", size: "35x35" %>
+      <span class='logo-text'>directed <span class='green'>reading</span> program</span>
+    </div>
+    <div class='user-links'>
+      <% if signed_in? %>
+        Welcome <%= current_user.first_name %>.
+        <%= link_to "Sign Out", signout_path, method: :delete %>
+        <%= link_to "Create profile", controller: "mentor_profile", action: "new" %>
+      <% else  %>
+        <%= link_to "Login", controller: "sessions", action: "new" %>
+      <% end %>
+    </div>
+  </div>
 </div>
