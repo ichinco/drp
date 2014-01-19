@@ -1,27 +1,60 @@
-<div class="row">
-  <div class="span6 offset3">
+<section>
+<div class="profile-section">
+  <div class="user side-bar">
+    <%= gravatar_for @current_user, { size: 250 } %>
+    <h3 class='user-name'>
+       <%= @current_user[:first_name] %>
+       <%= @current_user[:last_name] %>
+    </h3>
+    <div class='user-info email'>
+       <div class='icon'></div>
+       <%= @current_user[:email] %>
+    </div>
+  </div>
+  <div class='profile-section'>
+    <h1 class='form-title'>Update your profile</h1>
     <%= form_for @profile, url: {action: "create"} do |f| %>
-
-      <%= f.label :bio %>
+      <div>
+         <%= f.label :"First name" %>
+         <%= text_field_tag :first_name %>
+      </div>
+      <div>
+         <%= f.label :"Last name" %>
+         <%= text_field_tag :last_name %>
+      </div> 
+      <div>
+         <%= f.label :"Email (will be public)" %>
+         <%= text_field_tag :email %>
+      </div>
+      <div> 
+      <%= f.label :"About me" %>
       <%= f.text_area :bio %>
-  <br>
-      <%= f.label "my interests" %>
-      <% @interests.each do |interest| %>
-      <ul>
-         <li>
-         <%= check_box_tag "interest[]", 
-                           interest[:name], 
-                           checked: true %>
-         <%= label_tag interest[:name] %>
-         </li>
-      </ul>
-      <% end %>
-
-      <%= f.label 'Add new interests' %>
+      </div>
+      <div>
+      <%= f.label :"Add interest" %>
       <%= text_field_tag :interests %>
+      </div>
+      <div>
+      <% @interests.each do |interest| %>
+         <ul>
+            <li>
+            <%= check_box_tag "interest[]", 
+                              interest[:name], 
+                              checked: true %>
+            <%= label_tag interest[:name] %>
+            </li>
+         </ul>
+      <% end %>
+      </div>
 
       <%= f.submit "Save", class: "btn btn-large btn-primary" %>
     <% end %>
   </div>
-    
 </div>
+</section>
+<script type='text/template'> 
+   <div class='interest tag'>
+      <div class='name'>{{name}}</div>
+      <div class='button-container'><div class='button close'></div></div>
+   </div>
+</script>

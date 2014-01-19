@@ -15,4 +15,4 @@
 //= require turbolinks
 //= require underscore
 //= require backbone
-//= require_tree .
+//= require_tree ./sitewide

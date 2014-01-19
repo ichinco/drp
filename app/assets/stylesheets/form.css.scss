@@ -1,0 +1,87 @@
+label
+{
+   color: #690; 
+   font-size: 14px;
+   display: block;
+
+}
+
+input, textarea
+{
+   background-color: #BFBFBD;
+   border: 0px;
+   padding: 5px 8px;
+   font-size: 16px;
+   font-family: 'Open sans', sans-serif;
+   color: #efefee;
+   display: inline-block;
+   margin: 0px;
+}
+
+input[type='submit']
+{
+   background-color: #ddd;
+   color: #666;
+}
+
+input[type='submit']:hover
+{
+   background-color: #690;
+   color: white;
+}
+
+.add.button
+{
+   display: inline-block;
+   vertical-align: top;
+   background-color: #690;
+   margin: 0px 0px 0px -2px;
+   width: 32px;
+   height: 32px;
+   text-align: center;
+   color: #efefee;
+   font-size: 45px;
+   font-weight: 300;
+   line-height: 29px;
+
+   cursor: pointer;
+}
+
+.tag-container
+{
+   display: inline-block;
+   margin: 1px 3px;
+}
+
+.tag 
+{
+   display: table-row;
+   
+   *
+   {
+      display: table-cell;
+      vertical-align: middle;
+   }
+
+   .name
+   {
+      background-color: #a1a1a1;
+      color: white;
+      padding: 1px 8px 3px;
+      font-size: 14px; 
+      cursor: pointer;
+   }
+
+   .button-container
+   {
+      border-left: 1px solid transparent;
+   }
+
+   .close.button
+   {
+      background-color: #4a4a4a;
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+   }
+}
