@@ -18,6 +18,12 @@ input, textarea
    margin: 0px;
 }
 
+input.error
+{
+   border: 1px solid #a21;
+   padding: 4px 7px;
+}
+
 input[type='submit']
 {
    background-color: #ddd;
