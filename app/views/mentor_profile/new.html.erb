@@ -1,4 +1,5 @@
 <section>
+<div class="section-wrapper">
 <div class="profile-section">
   <div class="user side-bar">
     <%= gravatar_for @current_user, { size: 250 } %>
@@ -11,26 +12,26 @@
        <%= @current_user[:email] %>
     </div>
   </div>
-  <div class='profile-section'>
+  <div class='profile-container'>
     <h1 class='form-title'>Update your profile</h1>
     <%= form_for @profile, url: {action: "create"} do |f| %>
-      <div>
+      <div class='form-element'>
          <%= f.label :"First name" %>
          <%= text_field_tag :first_name %>
       </div>
-      <div>
+      <div class='form-element'>
          <%= f.label :"Last name" %>
          <%= text_field_tag :last_name %>
       </div> 
-      <div>
+      <div class='form-element'>
          <%= f.label :"Email (will be public)" %>
          <%= text_field_tag :email %>
       </div>
-      <div> 
+      <div class='form-element'> 
       <%= f.label :"About me" %>
       <%= f.text_area :bio %>
       </div>
-      <div>
+      <div class='form-element'>
       <%= f.label :"Add interest" %>
       <%= text_field_tag :interests %>
       </div>
@@ -49,6 +50,7 @@
 
       <%= f.submit "Save", class: "btn btn-large btn-primary" %>
     <% end %>
+  </div>
   </div>
 </div>
 </section>
