@@ -11,4 +11,12 @@
 			             password_confirmation:'123456789012345', 
 			             first_name: 'Knight',
 			             last_name: 'Fu' unless Users.find_by email:'knight.w.fu@gmail.com'
-@knightfu.save			            
+@knightfu.save		            
+
+@fiorda   = Users.create email:'francesco.fiordalisi@rutgers.edu',
+                         password:'11223344556677',
+                         password_confirmation:'11223344556677',
+                         first_name: 'Francesco',
+                         last_name: 'Fiordalisi' \
+                            unless Users.find_by email:'francesco.fiordalisi@rutgers.edu'
+@fiorda.save

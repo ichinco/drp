@@ -19,8 +19,9 @@
         .info{
             display: inline-block;
             position: absolute;
-            //right: 50px;
-            top: 50px;
+            right: 0px;
+            top: 30px;
+            max-width: 345px;
 
             .name{
                 font-size: 30px;
