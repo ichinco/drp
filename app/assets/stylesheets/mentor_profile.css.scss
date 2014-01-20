@@ -1,3 +1,65 @@
 // Place all the styles related to the MentorProfile controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.section-wrapper
+{
+   width: 60%;
+   min-width: 650px;
+   margin: 80px auto;
+
+   .profile-section
+   {
+      display: table-row;
+      width: 60%;
+      min-width: 650px;
+
+      > *
+      {
+         display: table-cell;
+         vertical-align: top;
+      }
+
+      .profile-container
+      {
+         padding-left: 15px;
+         width: 60%;
+
+         input, textarea
+         {
+            width: 100%;
+         }
+
+         input[type='submit']
+         {
+            position: relative;
+            width: auto;
+            padding: 2px 15px;
+            float: right;
+            margin: 0px;
+            right: -15px;
+
+            ::before
+            {
+               clear: both;
+            }
+
+            ::after
+            {
+               clear: both;
+            }
+         }
+
+         textarea
+         {
+            resize: none;
+            height: 200px;
+         }
+
+         .form-title
+         {
+            margin-top: 0px;
+         }
+      }
+   }
+}

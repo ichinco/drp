@@ -1,3 +1,19 @@
+GIT
+  remote: git://github.com/acquaintable/handlebars_assets.git
+  revision: 3c3873497708120f59cc5bdb465db0f84ea3d6d5
+  specs:
+    handlebars_assets (0.14.1)
+      execjs (>= 1.2.9)
+      sprockets (>= 2.0.3)
+      tilt
+
+GIT
+  remote: git://github.com/acquaintable/requirejs-rails.git
+  revision: 17f494949d9128c23270edd3d9027f6fce4ac53c
+  specs:
+    requirejs-rails (0.9.1.1)
+      railties (>= 3.1.1, < 4.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -160,11 +176,13 @@ DEPENDENCIES
   capybara (= 2.1.0)
   coffee-rails (~> 4.0.0)
   factory_girl_rails (= 4.2.1)
+  handlebars_assets!
   jbuilder (~> 1.2)
   jquery-rails
   pg (= 0.15.1)
   rails (= 4.0.0)
   rails_12factor (= 0.0.2)
+  requirejs-rails!
   rspec-rails (= 2.13.1)
   sass-rails (~> 4.0.0)
   sdoc

@@ -4,6 +4,9 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 gem 'bootstrap-sass', '2.3.2.0'
+
+gem 'requirejs-rails', github: 'acquaintable/requirejs-rails' 
+gem 'handlebars_assets', github: 'acquaintable/handlebars_assets' 
 gem 'bcrypt-ruby', '3.0.1'
 
 group :development, :test do

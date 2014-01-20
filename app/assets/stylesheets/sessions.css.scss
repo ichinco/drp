@@ -2,11 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.cologin-box
 
+.hidden {
+  visibility: hidden;
+}
+
 .login-box{
     margin: auto;
     margin-top: 43px;
     width: 400px;
-    overflow: auto;
     * {
         display: block;    
         font-size: 20px;
