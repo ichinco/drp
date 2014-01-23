@@ -7,7 +7,8 @@
         </div>
         <div class="info">
             <h1 class="name"><%= @name %></h1>
-            <div class="roles green">Admin</div>
+            <div class="roles green"><%= @roles_string %>
+            </div>
             <div class="email">
                 <div class="email-img">
                     <%= image_tag "", size: "25x25" %>
