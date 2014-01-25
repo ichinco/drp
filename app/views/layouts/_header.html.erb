@@ -1,9 +1,11 @@
 <div class='login-bar'>
   <div class='bar-container'>
-    <div class=<%='logo-small ' + yield(:logo_visible) %> >
-      <%= image_tag "logo.png", size: "35x35" %>
-      <span class='logo-text'>directed <span class='green'>reading</span> program</span>
-    </div>
+    <%= link_to root_path do %>  
+      <div class=<%='logo-small ' + yield(:logo_visible) %> >
+        <%= image_tag "logo.png", size: "35x35" %>
+        <span class='logo-text'>directed <span class='green'>reading</span> program</span>
+      </div>
+    <% end %>
     <div class='user-links'>
       <% if signed_in? %>
         <div class='welcome-message'>
