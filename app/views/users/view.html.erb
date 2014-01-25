@@ -1,9 +1,8 @@
 <h1>Users#view</h1>
-<p>Find me in app/views/users/view.html.erb</p>
 <ul>
 <% @users.each do |user| %>
     <li>
-        <%= link_to user.first_name + ' ' + user.last_name, controller: "users", action: "show", id: user %>
+        <%= link_to "#{user.first_name} #{user.last_name}", controller: "users", action: "show", id: user %>
     </li>
 <% end %>
 </ul>
