@@ -19,27 +19,30 @@
         .info{
             display: inline-block;
             position: absolute;
-            right: 0px;
-            top: 30px;
+            margin-left: 20px;
             max-width: 345px;
 
             .name{
+                line-height: 25px;
+                height: 30px; 
                 font-size: 30px;
                 font-weight: 600;
                 margin: 0;
             }
             
             .roles{
-                font-weight: 600;
+                font-weight: 300;
             }
 
             .email{
                 .email-img{
+                    height:20px;
                     display: inline-block;
                     vertical-align: middle;
                 }
 
                 .email-address{
+                    margin-left: 4px;
                     display: inline;
                     font-size: 15px;
                 }
