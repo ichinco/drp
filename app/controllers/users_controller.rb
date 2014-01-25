@@ -16,4 +16,12 @@ class UsersController < ApplicationController
     end
     @roles_string = roles.join ", "
   end
+
+  def send_msg
+    @user = Users.find(params[:id])
+    DrpMailer.new_email(@user).deliver
+    @users = Users.all
+    render 'users/view'
+  end
+
 end
