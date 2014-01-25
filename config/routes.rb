@@ -14,7 +14,7 @@ Drp::Application.routes.draw do
   match '/users/send_msg/:id', to: 'users#send_msg', via: 'get'
 
   # quasi-RESTful search url API
-  match '/interests/search', to: 'interests#search', via: 'post'
+  match '/interests/index', to: 'interests#index', via: 'post'
 
   match '/mentor_profile', to: 'mentor_profile#create', via: 'post'
   match '/mentor_profile/create', to: 'mentor_profile#create', via: 'patch'
