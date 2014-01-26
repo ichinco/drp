@@ -17,19 +17,19 @@
     <%= form_for @profile, url: {action: "create"} do |f| %>
       <div class='form-element'>
          <%= f.label :"First name" %>
-         <%= text_field_tag :first_name %>
+         <%= text_field_tag :first_name, @current_user[:first_name] %>
       </div>
       <div class='form-element'>
          <%= f.label :"Last name" %>
-         <%= text_field_tag :last_name %>
+         <%= text_field_tag :last_name, @current_user[:last_name] %>
       </div> 
       <div class='form-element'>
          <%= f.label :"Email (will be public)" %>
-         <%= text_field_tag :email %>
+         <%= text_field_tag :email, @current_user[:email] %>
       </div>
       <div class='form-element'> 
       <%= f.label :"About me" %>
-      <%= f.text_area :bio %>
+      <%= f.text_area :bio, value: (@profile.nil? && @profile.bio) || 'Add a short bio of yourself.' %>
       </div>
       <div class='form-element'>
       <%= f.label :"Add interest" %>

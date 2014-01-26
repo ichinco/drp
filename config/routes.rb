@@ -8,7 +8,13 @@ Drp::Application.routes.draw do
   get "mentor_profile/view"
   get "mentor_profile/delete"
   
-  match '/users/view', to: 'users#view', via: 'get'
+  match '/users/', to: 'users#view', via: 'get'
+  match '/users/:id', to: 'users#show', via: 'get'
+### mail message route
+  match '/users/send_msg/:id', to: 'users#send_msg', via: 'get'
+
+  # quasi-RESTful search url API
+  match '/interests/index', to: 'interests#index', via: 'post'
 
   match '/mentor_profile', to: 'mentor_profile#create', via: 'post'
   match '/mentor_profile/create', to: 'mentor_profile#create', via: 'patch'

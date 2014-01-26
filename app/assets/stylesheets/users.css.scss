@@ -1,3 +1,65 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user{
+    margin: auto;
+    max-width: 500px;
+    padding-top: 20px;
+
+    .top{
+        position: relative;
+        margin: 20px 0;
+        
+        .gravatar{
+            display: inline-block;
+
+        }
+
+        .info{
+            display: inline-block;
+            position: absolute;
+            margin-left: 20px;
+            max-width: 345px;
+
+            .name{
+                line-height: 25px;
+                height: 30px; 
+                font-size: 30px;
+                font-weight: 600;
+                margin: 0;
+            }
+            
+            .roles{
+                font-weight: 300;
+            }
+
+            .email{
+                .email-img{
+                    height:20px;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                .email-address{
+                    margin-left: 4px;
+                    display: inline;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    .bio{
+        text-align: justify;
+        margin-bottom: 35px;
+    }
+    .interests{
+        .paragraph-title{
+            font-size: 20px;
+            font-weight: 500; 
+            margin-bottom: 0;
+        }
+
+    }
+}

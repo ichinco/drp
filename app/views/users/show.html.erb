@@ -1,0 +1,35 @@
+<% provide(:title, @name) %>
+
+<div class="user">
+    <div class="top">
+        <div class="gravatar">
+             <%= gravatar_for @user, { size: 150 } %>
+        </div>
+        <div class="info">
+            <h1 class="name"><%= @name %></h1>
+            <div class="roles green"><%= @roles_string %>
+            </div>
+            <div class="email">
+                <div class="email-img">
+                    <%= image_tag "email_icon.png", size:"20x20" %>
+                </div>
+                <div class="email-address">
+                    <%= @email %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bio">
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+    </div>
+    <% if @user.mentor_profile %>
+    <div class="interests">
+       <h3 class="paragraph-title">Interests</h3> 
+       <p>Ille ego, qui quondam gracili modulatus avena
+carmen, et egressus silvis vicina coëgi
+ut quamvis avido parerent arva colono,
+gratum opus agricolis, at nunc horrentia Martis</p>
+    </div>
+    <% end %>
+</div>
+

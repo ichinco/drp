@@ -75,7 +75,11 @@ h2 {
     }
     .logo-small, .user-links{
       width: 50%;
+      top: 4px;
       position: absolute;  
+    }
+    .logo-small {
+      width: 240px;
     }
   }
   a
